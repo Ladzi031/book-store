@@ -1,0 +1,40 @@
+a {
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 24px;
+}
+#logo {
+  font-size: xx-large;
+}
+.header {
+  background-color: rgb(39, 39, 246);
+  padding: 0 20px;
+  height: 70px;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+}
+.btn-theme {
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  background-color: rgb(47, 47, 105);
+  border-color: rgb(47, 47, 105);
+  outline: none;
+}
+.btn-theme:hover {
+  opacity: 0.7;
+}
+.head-right-item {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.cart {
+  font-size: xx-large;
+  line-height: 24px;
+  cursor: pointer;
+  outline: none;
+}

@@ -1,1 +1,12 @@
-<p>product works!</p>
+<div class="book-card p-1 d-flex flex-column justify-content-between">
+  <div class="d-flex justify-content-center">
+    <a routerLink="/product-details">
+      <img class="boot-thumbnal" [src]="book.thumbnailUrl" alt="" />
+    </a>
+  </div>
+  <div class="card-content">
+    <h4 class="text-truncate">{{ book.title }}</h4>
+    <p class="text-truncate text-secondary">{{ book.categories }}</p>
+    <button class="btn btn-theme">Add to cart</button>
+  </div>
+</div>

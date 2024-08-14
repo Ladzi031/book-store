@@ -8,6 +8,7 @@ import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart-item/cart-item.component';
 import { PriceDetailsComponent } from './price-details/price-details.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +24,8 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
     SidePanelComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent

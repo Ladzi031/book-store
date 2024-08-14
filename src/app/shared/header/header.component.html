@@ -1,1 +1,20 @@
-<p>header works!</p>
+<div class="header d-flex align-items-center">
+  <a routerLink="/home" id="logo"> 📚</a>
+  <form #searchBox="ngForm">
+    <div class="header-search d-flex align-items-center">
+      <input
+        type="text"
+        class="search-box"
+        [(ngModel)]="searchText"
+        name="searchText"
+        placeholder="Search for books"
+      />
+    </div>
+  </form>
+  <button class="btn-theme ms-4">Sort</button>
+  <div class="head-right-item">
+    <div class="cart" routerLink="/cart">
+        🛒
+    </div>
+  </div>
+</div>

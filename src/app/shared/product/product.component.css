@@ -1,0 +1,32 @@
+.book-card {
+  width: 280px;
+  border: none;
+  outline: none;
+  background-color: rgb(77, 77, 133);
+  border-radius: 10px;
+  margin: 50px 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+.book-card:hover {
+  box-shadow: 5px 5px 20px grey;
+}
+
+.book-thumbnail {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 260px;
+  height: 335px;
+  cursor: pointer;
+}
+.card-content {
+  padding: 20px;
+}
+.btn-theme {
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  background-color: rgb(47, 47, 105);
+  border-color: rgb(3, 3, 10);
+  outline: none;
+}

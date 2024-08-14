@@ -1,0 +1,15 @@
+.side-panel {
+  width: 300px;
+  height: 650px;
+  border: 1px solid silver;
+  border-top: none;
+  border-left: none;
+  background-color: rgb(47, 47, 105);
+  text-align: center;
+}
+span {
+  color: whitesmoke;
+  line-height: 28px;
+  font-size: 28px;
+}
+ 
