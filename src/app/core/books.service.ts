@@ -26,4 +26,3 @@ export class BooksService {
 // we could use tap operator here!
 // this works because, books returned are of some type and this.books is of type any
 // otherwise map() purpose is to transform a type to some other type, but here we not really transforming
-

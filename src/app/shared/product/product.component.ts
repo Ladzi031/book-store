@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CartService } from 'src/app/core/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -7,4 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductComponent {
   @Input() book: any;
+  isProductInCart: boolean = false;
+
+  constructor(private cartService: CartService) {
+
+  }
+  public addToCart(book: any) {
+    this.cartService.addProductToCart(book);
+    this.isProductInCart = !this.isProductInCart; // true
+  }
 }

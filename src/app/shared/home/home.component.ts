@@ -8,7 +8,6 @@ import { BooksService } from 'src/app/core/books.service';
 })
 export class HomeComponent implements OnInit {
   books: any[] = [];
-
   constructor(private booksService: BooksService) {
 
   }
@@ -23,4 +22,6 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
+
 }

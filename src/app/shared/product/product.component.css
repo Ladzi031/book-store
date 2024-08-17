@@ -30,3 +30,20 @@
   border-color: rgb(3, 3, 10);
   outline: none;
 }
+
+.btn-theme:hover {
+  animation: make_opaque 1s ease-in forwards;
+}
+
+@keyframes make_opaque {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

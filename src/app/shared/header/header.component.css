@@ -37,4 +37,14 @@ a {
   line-height: 24px;
   cursor: pointer;
   outline: none;
+  color: rgb(200, 198, 198);
+}
+.cart span {
+  padding: 4px;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  position: relative;
+  right: 8px;
+  bottom: 20px;
 }

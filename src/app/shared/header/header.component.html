@@ -14,7 +14,9 @@
   <button class="btn-theme ms-4">Sort</button>
   <div class="head-right-item">
     <div class="cart" routerLink="/cart">
-        🛒
+      🛒<span *ngIf="numberOfProductsInCart > 0">{{
+        numberOfProductsInCart
+      }}</span>
     </div>
   </div>
 </div>
