@@ -10,8 +10,9 @@ export class CartService {
   constructor() { }
 
   public addProductToCart(product: any) {
-    let currrentProduct = {...product, count: 1};
+    let currrentProduct = { ...product, count: 1 };
     this.cartProducts.push(currrentProduct);
     this.cartSubject.next(this.cartProducts);
+    // multi-casting the actual cart to subscribers is actually a good idea, right many subscribers can use this info to their liking!  
   }
 }

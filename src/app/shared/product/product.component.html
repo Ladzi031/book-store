@@ -14,8 +14,9 @@
     >
       Add to cart
     </button>
-    <button class="btn btn-theme w-100" *ngIf="isProductInCart">
+    <button class="btn btn-theme w-100" *ngIf="isProductInCart" (click)="goToCart()">
       Go to cart
     </button>
   </div>
 </div>
+ 

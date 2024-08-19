@@ -13,7 +13,7 @@
   </form>
   <button class="btn-theme ms-4">Sort</button>
   <div class="head-right-item">
-    <div class="cart" routerLink="/cart">
+    <div class="cart" (click)="goToCart()">
       🛒<span *ngIf="numberOfProductsInCart > 0">{{
         numberOfProductsInCart
       }}</span>

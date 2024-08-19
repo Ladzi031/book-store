@@ -1,1 +1,15 @@
-<p>cart works!</p>
+<div class="cart">
+  <div class="empty-cart d-flex flex-column align-items-center">
+    <!--
+            rendered when cart is empty 
+        -->
+    <h1 class="text-large text-theme mb-50">Oops</h1>
+    <div class="cart-empty-img">🪹</div>
+    <!--
+        empty nest emoji 
+     -->
+  </div>
+  <h1 class="mt-4">No Items In your cart</h1>
+  <blockquote>Add items to continue shopping</blockquote>
+  <button class="btn btn-primary w-25" (click)="goToHome()">shop now</button>
+</div>

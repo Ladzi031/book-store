@@ -1,0 +1,19 @@
+* {
+  text-align: center;
+}
+.cart-empty-img {
+  font-size: 100px;
+}
+.empty-cart {
+  margin-top: 50px;
+}
+.text-large {
+  font-size: 80px;
+}
+
+.text-theme {
+  color: rgb(47, 47, 105);
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
