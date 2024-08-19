@@ -9,6 +9,7 @@ import { CartItemComponent } from './cart-item/cart-item.component';
 import { PriceDetailsComponent } from './price-details/price-details.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent

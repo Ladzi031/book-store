@@ -15,4 +15,8 @@ export class CartService {
     this.cartSubject.next(this.cartProducts);
     // multi-casting the actual cart to subscribers is actually a good idea, right many subscribers can use this info to their liking!  
   }
+
+  public getAllCartItems() {
+    return this.cartProducts;
+  }
 }
