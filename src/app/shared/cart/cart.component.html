@@ -17,7 +17,10 @@
     *ngIf="cartItems.length"
   >
     <div class="items-container me-5">
-      <app-cart-item></app-cart-item>
+      <app-cart-item
+        [cartItem]="item"
+        *ngFor="let item of cartItems"
+      ></app-cart-item>
     </div>
   </div>
 </div>

@@ -1,1 +1,21 @@
-<p>cart-item works!</p>
+<div class="book-card p-4 d-flex justify-content-start">
+  <div class="left-container">
+    <div class="d-flex justify-content-center">
+      <img [src]="cartItem.thumbnailUrl" alt="some pic bruv" />
+    </div>
+    <div class="counter mt-5 d-flex justify-content-center">
+      <button
+        class="btn btn-primary btn-theme d-flex align-items-center"
+        [disabled]="cartItem.count == 1"
+      >
+        -
+      </button>
+      <div class="p-2 m-1">
+        {{ cartItem.count }}
+      </div>
+      <button class="btn btn-primary btn-theme d-flex align-items-center">
+        +
+      </button>
+    </div>
+  </div>
+</div>
