@@ -1,21 +1,49 @@
 <div class="book-card p-4 d-flex justify-content-start">
   <div class="left-container">
     <div class="d-flex justify-content-center">
-      <img [src]="cartItem.thumbnailUrl" alt="some pic bruv" />
+      <img
+        class="book-thumbnail"
+        [src]="cartItem.thumbnailUrl"
+        alt="some pic bruv"
+      />
     </div>
     <div class="counter mt-5 d-flex justify-content-center">
       <button
         class="btn btn-primary btn-theme d-flex align-items-center"
         [disabled]="cartItem.count == 1"
+        (click)="decrementItemQuantity(cartItem)"
       >
         -
       </button>
-      <div class="p-2 m-1">
+      <div class="p-2 m-1 t">
         {{ cartItem.count }}
       </div>
-      <button class="btn btn-primary btn-theme d-flex align-items-center">
+      <button
+        class="btn btn-primary btn-theme d-flex align-items-center"
+        (click)="incrementItemQuantity(cartItem)"
+      >
         +
       </button>
     </div>
+  </div>
+  <div class="right-container ms-5 d-flex flex-column">
+    <h2>{{ cartItem.title }}</h2>
+    <div>
+      <h3 class="d-inline-block">
+        {{ discountedPrice | currency : "ZAR" }}
+      </h3>
+      <span class="ms-2">
+        <s class="text-secondary">
+          {{ itemPrice | currency : "ZAR" }}
+        </s>
+      </span>
+      <span class="ms-2 text-success"> {{ cartItem.discount }} % Off </span>
+    </div>
+    <button
+      class="btn btn-warning w-fit mt-auto"
+      (click)="removeItem(cartItem)"
+    >
+      Remove
+    </button>
   </div>
 </div>

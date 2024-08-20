@@ -19,4 +19,44 @@ export class CartService {
   public getAllCartItems() {
     return this.cartProducts;
   }
+
+  public getPriceDetailsInCartItem(product: any) {
+    let priceDetails = {
+      discountedPrice: (product.price * product.count) - (product.discount) / 100 + (product.price * product.count),
+      price: product.count * product.price
+    }
+    return priceDetails;
+  }
+
+
+  public incrementItemQuantity(product: any) {
+    let index = this.cartProducts.findIndex((item) => {
+      return item.isbn === product.isbn;
+    });
+    this.cartProducts[index].count++;
+    this.getPriceDetailsInCartItem(product); // isn't observables or signals a great choice for this?
+    this.cartSubject.next(this.cartProducts);
+  }
+
+  public decrementItemQuantity(product: any) {
+    let index = this.cartProducts.findIndex((item) => {
+      return item.isbn === product.isbn;
+    });
+    this.cartProducts[index].count--;
+    this.getPriceDetailsInCartItem(product); // observables/subject/signals
+    this.cartSubject.next(this.cartProducts);
+  }
+
+
+  public removeItemFromCart(product: any) {
+    if (window.confirm("Are You Sure?")) {
+      let index = this.cartProducts.findIndex((item) => {
+        return item.isbn === product.isbn;
+      });
+      this.cartProducts.splice(index, 1);
+      this.cartSubject.next(this.cartProducts);
+    }
+  }
 }
+// for the function getPriceDetailsInCartItem, that is within other function if the change is reflected in the front-end,
+// that would be due the change-detection framework baked with-in angular
