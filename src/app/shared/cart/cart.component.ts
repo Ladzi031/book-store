@@ -16,8 +16,7 @@ export class CartComponent implements OnInit {
     this.cartItems = this.cartService.getAllCartItems();
   }
 
-
-
+  
   public goToHome() {
     this.router.navigate(["/home"]);
   }

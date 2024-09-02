@@ -17,3 +17,11 @@
 .mb-50 {
   margin-bottom: 50px;
 }
+
+.checkout {
+  position: relative;
+  right: 112px;
+  top: 245px;
+  width: 350px;
+  border: 1px solid silver;
+}
