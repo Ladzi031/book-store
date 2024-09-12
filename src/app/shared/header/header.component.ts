@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BooksService } from 'src/app/core/books.service';
 import { CartService } from 'src/app/core/cart.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class HeaderComponent implements OnInit {
   isSortMenuVisible: boolean = false;
   criteria: any[] = ['Price(Low to High)'];
 
-  constructor(private cartService: CartService, private router: Router) {
+  constructor(private cartService: CartService, private router: Router, private bookService: BooksService) {
   }
 
   public ngOnInit(): void {
@@ -27,7 +28,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public sortBooks(criterion: any) {
-
+    this.bookService.sortBooks(criterion);
   }
 
   public toggleSortMenu() {
