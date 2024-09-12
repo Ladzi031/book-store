@@ -11,7 +11,20 @@
       />
     </div>
   </form>
-  <button class="btn-theme ms-4">Sort</button>
+  <button class="btn-theme ms-4" (click)="toggleSortMenu()">Sort</button>
+  <div class="dropdown-container" *ngIf="isSortMenuVisible">
+    <div class="dropdown-list row w-250">
+      <span
+        class="dropdown-list-item"
+        *ngFor="let criterion of criteria"
+        (click)="sortBooks(criterion)"
+      >
+        {{ criterion }}
+      </span>
+    </div>
+  </div>
+
+  <!-- by the current layout -->
   <div class="head-right-item">
     <div class="cart" (click)="goToCart()">
       🛒<span *ngIf="numberOfProductsInCart > 0">{{

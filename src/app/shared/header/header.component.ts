@@ -10,8 +10,12 @@ import { CartService } from 'src/app/core/cart.service';
 export class HeaderComponent implements OnInit {
   searchText: string = "";
   numberOfProductsInCart: number = 0;
+  isSortMenuVisible: boolean = false;
+  criteria: any[] = ['Price(Low to High)'];
+
   constructor(private cartService: CartService, private router: Router) {
   }
+
   public ngOnInit(): void {
     this.cartService.cartSubject.subscribe((result: any) => {
       this.numberOfProductsInCart = result.length;
@@ -20,5 +24,13 @@ export class HeaderComponent implements OnInit {
 
   public goToCart() {
     this.router.navigate(["/cart"]);
+  }
+
+  public sortBooks(criterion: any) {
+
+  }
+
+  public toggleSortMenu() {
+    this.isSortMenuVisible = !this.isSortMenuVisible;
   }
 }
