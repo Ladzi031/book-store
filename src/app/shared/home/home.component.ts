@@ -20,7 +20,11 @@ export class HomeComponent implements OnInit {
       error: (err) => {
         console.log(err);
       }
-    })
+    });
+
+    this.booksService.sortSubject.subscribe((sortCriterion: any) => {
+      this.books = this.booksService.sortBooks(sortCriterion);
+    } )
   }
 
 

@@ -51,6 +51,7 @@ export class BooksService {
       default:
         console.log('Books-Service --> oops!');
     }
+    return this.filteredBooks;
   }
 }
 // we could use tap operator here!
