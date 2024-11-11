@@ -1,1 +1,3 @@
-# Bookmart
+# ecommerce bookstore front-end
+A practice project in Angular for building E-commmerce scale front-ends SPA's  
+* project is still a work in progress...
